@@ -24,6 +24,18 @@
         <h2>Вітаю на цьому сайті!</h2>
         <p>Тут щось буде знаходитись</p>
     </div>
+     &nbsp&nbsp&nbsp&nbsp&nbsp<button id="greet-btn">Вітання</button>
+<div id="greeting-message"></div>
+
+<script>
+    document.getElementById("greet-btn").addEventListener("click", function() {
+        let date = new Date();
+        let hours = date.getHours();
+        let greeting = hours < 12 ? "Добрий ранок!" : hours < 18 ? "Добрий день!" : "Добрий вечір!";
+        document.getElementById("greeting-message").innerText = greeting + " Сьогодні: " + date.toLocaleDateString();
+    });
+</script>
+
 
 </body>
 </html>
